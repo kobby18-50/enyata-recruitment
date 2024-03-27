@@ -25,6 +25,10 @@ app.use(express.json())
 app.use(morgan('tiny'))
 
 
+// serving doc
+app.use(express.static('./public'))
+
+
 // routes
 app.get('/', (req,res) => {
     res.send('Welcome')
